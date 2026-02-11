@@ -18,7 +18,14 @@ Extraer URLs E Imagenes De Bandcamp
     Create File    ${MISSING_FILE}    ${EMPTY}
     Create Directory    ${IMAGE_DIR}
 
-    Open Browser    about:blank    Chrome
+
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+
+    Open Browser    about:blank    Chrome    options=${options}
+
     Maximize Browser Window
     ${contador}=    Set Variable    1
 
