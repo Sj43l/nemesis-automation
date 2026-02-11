@@ -1,0 +1,18 @@
+name: Bandcamp Scraper
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-bandcamp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t nemesis-tests .
+
+      - name: Run Bandcamp scraper
+        run: docker run nemesis-tests robot robot/bandcamp.robot
