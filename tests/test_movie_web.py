@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 from api.movie_api import get_popular_movie
 import time
 
@@ -8,7 +9,12 @@ import time
 def test_search_movie_on_wikipedia():
     movie = get_popular_movie()
 
-    driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
+    driver = webdriver.Chrome(options=options)
     driver.get("https://www.wikipedia.org")
 
     search_box = driver.find_element(By.NAME, "search")

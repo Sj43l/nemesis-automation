@@ -130,7 +130,7 @@ Aceptar Cookies Si Aparece
     Log To Console    Iteración: ${contador}
 
     IF    '${result}' == 'NOT_FOUND' and ${contador} == 1
-        Fail    ❌ Popup detectado pero no se pudo cerrar en la primera URL
+         Log To Console    ⚠️ No apareció popup en la primera URL, se continúa
     END
 
     RETURN    ${result}

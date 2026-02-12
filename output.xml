@@ -1,0 +1,2888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-02-12T08:43:18.264407" rpa="false" schemaversion="5">
+<suite id="s1" name="Bandcamp" source="d:\automatizacion\nemesis-automation\robot\bandcamp.robot">
+<test id="s1-t1" name="Extraer URLs E Imagenes De Bandcamp" line="14">
+<kw name="Leer URLs Desde CSV">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:18.413024" level="INFO" html="true">Getting file '&lt;a href="file://D:\automatizacion\nemesis-automation\robot\bandcamp_urls.csv"&gt;D:\automatizacion\nemesis-automation\robot\bandcamp_urls.csv&lt;/a&gt;'.</msg>
+<msg time="2026-02-12T08:43:18.413289" level="INFO">${lines} = https://immortalfrostproductions1.bandcamp.com/album/vampyric-war-in-blood
+https://immortalfrostproductions1.bandcamp.com/album/castle-inside-the-eclipse
+https://immortalfrostproductions1.bandcamp.com...</msg>
+<var>${lines}</var>
+<arg>${INPUT_FILE}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.412879" elapsed="0.000443"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2026-02-12T08:43:18.413549" level="INFO">${urls} = []</msg>
+<var>${urls}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.413436" elapsed="0.000139"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.414098" elapsed="0.000127"/>
+</kw>
+<var name="${line}">https://immortalfrostproductions1.bandcamp.com/album/vampyric-war-in-blood</var>
+<status status="PASS" start="2026-02-12T08:43:18.414020" elapsed="0.000248"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.414422" elapsed="0.000120"/>
+</kw>
+<var name="${line}">https://immortalfrostproductions1.bandcamp.com/album/castle-inside-the-eclipse</var>
+<status status="PASS" start="2026-02-12T08:43:18.414355" elapsed="0.000229"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.414730" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://immortalfrostproductions1.bandcamp.com/album/onrust</var>
+<status status="PASS" start="2026-02-12T08:43:18.414666" elapsed="0.000219"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.415022" elapsed="0.000118"/>
+</kw>
+<var name="${line}">https://silentiuminforestarecords.bandcamp.com/album/m-ldeponie-the-lord-of-time-sold-out</var>
+<status status="PASS" start="2026-02-12T08:43:18.414960" elapsed="0.000223"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.415324" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://andallicansayis.bandcamp.com/album/these-hopes-are-long-lost</var>
+<status status="PASS" start="2026-02-12T08:43:18.415262" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.415613" elapsed="0.000122"/>
+</kw>
+<var name="${line}">https://parazitmx.bandcamp.com/album/zero-to-me</var>
+<status status="PASS" start="2026-02-12T08:43:18.415551" elapsed="0.000224"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.415909" elapsed="0.000117"/>
+</kw>
+<var name="${line}">https://spectrallore.bandcamp.com/album/iv-part-2-demo</var>
+<status status="PASS" start="2026-02-12T08:43:18.415847" elapsed="0.000220"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.416203" elapsed="0.000112"/>
+</kw>
+<var name="${line}">https://phelios.bandcamp.com/album/timelapse</var>
+<status status="PASS" start="2026-02-12T08:43:18.416141" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.416492" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://algol-official.bandcamp.com/track/becoming-nothing</var>
+<status status="PASS" start="2026-02-12T08:43:18.416430" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.416780" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://parazitmx.bandcamp.com/album/neomoira</var>
+<status status="PASS" start="2026-02-12T08:43:18.416718" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.417072" elapsed="0.000117"/>
+</kw>
+<var name="${line}">https://himmelsrandt.bandcamp.com/album/glossolalie</var>
+<status status="PASS" start="2026-02-12T08:43:18.417005" elapsed="0.000224"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.417365" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://libraryoftheoccult.bandcamp.com/album/magick-knives</var>
+<status status="PASS" start="2026-02-12T08:43:18.417303" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.417656" elapsed="0.000116"/>
+</kw>
+<var name="${line}">https://inthemeantime3.bandcamp.com/album/nox-aeterna-atmospheric-doom-death-metal</var>
+<status status="PASS" start="2026-02-12T08:43:18.417588" elapsed="0.000223"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.417948" elapsed="0.000266"/>
+</kw>
+<var name="${line}">https://inekt.bandcamp.com/album/vindr-auga</var>
+<status status="PASS" start="2026-02-12T08:43:18.417886" elapsed="0.000371"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.418399" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://persecutory.bandcamp.com/album/summoning-the-lawless-legions</var>
+<status status="PASS" start="2026-02-12T08:43:18.418336" elapsed="0.000217"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.418689" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://ennui-funeral.bandcamp.com/album/qroba</var>
+<status status="PASS" start="2026-02-12T08:43:18.418627" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.418976" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://nodtveidtblacklion.bandcamp.com/album/black-light-pantheon</var>
+<status status="PASS" start="2026-02-12T08:43:18.418914" elapsed="0.000299"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.419362" elapsed="0.000116"/>
+</kw>
+<var name="${line}">https://lychgate.bandcamp.com/album/precipice</var>
+<status status="PASS" start="2026-02-12T08:43:18.419298" elapsed="0.000219"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.419661" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://lychgate.bandcamp.com/album/also-sprach-futura</var>
+<status status="PASS" start="2026-02-12T08:43:18.419592" elapsed="0.000222"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.419948" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://lychgate.bandcamp.com/album/the-contagion-in-nine-steps-2</var>
+<status status="PASS" start="2026-02-12T08:43:18.419887" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.420230" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://lychgate.bandcamp.com/album/an-antidote-for-the-glass-pill-2</var>
+<status status="PASS" start="2026-02-12T08:43:18.420169" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.420509" elapsed="0.000109"/>
+</kw>
+<var name="${line}">https://ladlo.bandcamp.com/album/aux-heures-d-sesp-r-es</var>
+<status status="PASS" start="2026-02-12T08:43:18.420448" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.420789" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://toskadarkmetal.bandcamp.com/album/demo-2026</var>
+<status status="PASS" start="2026-02-12T08:43:18.420728" elapsed="0.000208"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.421068" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://avantgardemusic.bandcamp.com/album/meanders</var>
+<status status="PASS" start="2026-02-12T08:43:18.421007" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.421353" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://avantgardemusic.bandcamp.com/album/stillamentum</var>
+<status status="PASS" start="2026-02-12T08:43:18.421287" elapsed="0.000218"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.421647" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://domininocticol.bandcamp.com/album/filosof-a-de-la-antimateria-el-pasajero-oscuro</var>
+<status status="PASS" start="2026-02-12T08:43:18.421576" elapsed="0.000220"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.421928" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://domininocticol.bandcamp.com/album/dark-samadhi-the-quest-of-the-seeker</var>
+<status status="PASS" start="2026-02-12T08:43:18.421867" elapsed="0.000210"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.422208" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://olhava.bandcamp.com/album/memorial</var>
+<status status="PASS" start="2026-02-12T08:43:18.422148" elapsed="0.000212"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.422497" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://olhava.bandcamp.com/album/sacrifice</var>
+<status status="PASS" start="2026-02-12T08:43:18.422432" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.422779" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://olhava.bandcamp.com/album/eternal-fire</var>
+<status status="PASS" start="2026-02-12T08:43:18.422718" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.423062" elapsed="0.000108"/>
+</kw>
+<var name="${line}">https://severoth.bandcamp.com/album/by-the-way-of-light</var>
+<status status="PASS" start="2026-02-12T08:43:18.423001" elapsed="0.000207"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.423341" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://avantgardemusic.bandcamp.com/album/the-outsider</var>
+<status status="PASS" start="2026-02-12T08:43:18.423281" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.423632" elapsed="0.000118"/>
+</kw>
+<var name="${line}">https://alicemertonmusic.bandcamp.com/music</var>
+<status status="PASS" start="2026-02-12T08:43:18.423568" elapsed="0.000220"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.423925" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://coldnightforalligators.bandcamp.com/album/with-all-thats-left</var>
+<status status="PASS" start="2026-02-12T08:43:18.423863" elapsed="0.000211"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.424205" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://dzdeathrays.bandcamp.com/album/easing-out-of-control</var>
+<status status="PASS" start="2026-02-12T08:43:18.424145" elapsed="0.000208"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.424488" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://jessymach.bandcamp.com/album/chronicles-of-castle-black</var>
+<status status="PASS" start="2026-02-12T08:43:18.424425" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.424776" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://juliannabarwick.bandcamp.com/album/tragic-magic</var>
+<status status="PASS" start="2026-02-12T08:43:18.424712" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.425122" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://marianasrest.bandcamp.com/album/the-bereaved</var>
+<status status="PASS" start="2026-02-12T08:43:18.425058" elapsed="0.000216"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.425409" elapsed="0.000116"/>
+</kw>
+<var name="${line}">https://ovsulfur.bandcamp.com/album/endless-24-bit-hd-audio</var>
+<status status="PASS" start="2026-02-12T08:43:18.425348" elapsed="0.000216"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.425705" elapsed="0.000118"/>
+</kw>
+<var name="${line}">https://schattenfall.bandcamp.com/album/zwischen-erde-und-schatten</var>
+<status status="PASS" start="2026-02-12T08:43:18.425636" elapsed="0.000226"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.425997" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://sleepthrone.bandcamp.com/album/in-the-quiet-hours</var>
+<status status="PASS" start="2026-02-12T08:43:18.425935" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.426283" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://theprotomen.bandcamp.com/album/act-iii-this-city-made-us</var>
+<status status="PASS" start="2026-02-12T08:43:18.426219" elapsed="0.000217"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.426567" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://ssupervvoid.bandcamp.com/album/ep1</var>
+<status status="PASS" start="2026-02-12T08:43:18.426507" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.426862" elapsed="0.000157"/>
+</kw>
+<var name="${line}">https://understockport.bandcamp.com/album/what-happened-in-roundwood</var>
+<status status="PASS" start="2026-02-12T08:43:18.426786" elapsed="0.000288"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.427275" elapsed="0.000181"/>
+</kw>
+<var name="${line}">https://vesseles.bandcamp.com/album/home</var>
+<status status="PASS" start="2026-02-12T08:43:18.427177" elapsed="0.000334"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.427724" elapsed="0.000170"/>
+</kw>
+<var name="${line}">https://eximperitus.bandcamp.com/album/meritoriousness-of-equanimity</var>
+<status status="PASS" start="2026-02-12T08:43:18.427622" elapsed="0.000316"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.428079" elapsed="0.000117"/>
+</kw>
+<var name="${line}">https://eximperitus.bandcamp.com/track/opium-dead-can-dance-cover</var>
+<status status="PASS" start="2026-02-12T08:43:18.428015" elapsed="0.000221"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.428372" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://ladlo.bandcamp.com/album/r-sonances</var>
+<status status="PASS" start="2026-02-12T08:43:18.428310" elapsed="0.000212"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.428657" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://gavran.bandcamp.com/album/the-one-who-propels</var>
+<status status="PASS" start="2026-02-12T08:43:18.428595" elapsed="0.000211"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.428945" elapsed="0.000118"/>
+</kw>
+<var name="${line}">https://gorrch.bandcamp.com/album/stillamentum</var>
+<status status="PASS" start="2026-02-12T08:43:18.428879" elapsed="0.000224"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.429236" elapsed="0.000112"/>
+</kw>
+<var name="${line}">https://malignant-aura.bandcamp.com/album/where-all-of-worth-comes-to-wither</var>
+<status status="PASS" start="2026-02-12T08:43:18.429176" elapsed="0.000210"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.429518" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://moeldk.bandcamp.com/album/dreamcrush</var>
+<status status="PASS" start="2026-02-12T08:43:18.429457" elapsed="0.000220"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.429813" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://nightmarer.bandcamp.com/album/hell-interface</var>
+<status status="PASS" start="2026-02-12T08:43:18.429752" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.430098" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://plantoidworld.bandcamp.com/album/flare</var>
+<status status="PASS" start="2026-02-12T08:43:18.430038" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.430382" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://qasu.bandcamp.com/album/a-bleak-king-cometh</var>
+<status status="PASS" start="2026-02-12T08:43:18.430321" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.430670" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://sanctvs.bandcamp.com/album/de-lab-me-au-pl-r-me</var>
+<status status="PASS" start="2026-02-12T08:43:18.430609" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.430955" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://shieldsuk.bandcamp.com/album/death-connection</var>
+<status status="PASS" start="2026-02-12T08:43:18.430894" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.431315" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://immortalfrostproductions1.bandcamp.com/album/malefic-necropolis</var>
+<status status="PASS" start="2026-02-12T08:43:18.431250" elapsed="0.000219"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.431604" elapsed="0.000125"/>
+</kw>
+<var name="${line}">https://skulldband.bandcamp.com/album/abyss-call-to-abyss</var>
+<status status="PASS" start="2026-02-12T08:43:18.431542" elapsed="0.000228"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.431902" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://summerofhate.bandcamp.com/album/blood-honey</var>
+<status status="PASS" start="2026-02-12T08:43:18.431842" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.432193" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://syberia.bandcamp.com/album/quan-tot-sapagui</var>
+<status status="PASS" start="2026-02-12T08:43:18.432128" elapsed="0.000219"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.432479" elapsed="0.000112"/>
+</kw>
+<var name="${line}">https://thehirscheffekt.bandcamp.com/album/der-brauch</var>
+<status status="PASS" start="2026-02-12T08:43:18.432418" elapsed="0.000212"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.432760" elapsed="0.000117"/>
+</kw>
+<var name="${line}">https://godzovwarproductions.bandcamp.com/album/nieistnienie</var>
+<status status="PASS" start="2026-02-12T08:43:18.432699" elapsed="0.000218"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.433051" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://i-voidhangerrecords.bandcamp.com/album/from-the-waters-of-death</var>
+<status status="PASS" start="2026-02-12T08:43:18.432988" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.433331" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://arbitratorus.bandcamp.com/album/nephilim</var>
+<status status="PASS" start="2026-02-12T08:43:18.433271" elapsed="0.000208"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.433612" elapsed="0.000118"/>
+</kw>
+<var name="${line}">https://texturesband.bandcamp.com/album/genotype</var>
+<status status="PASS" start="2026-02-12T08:43:18.433549" elapsed="0.000221"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.433904" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://temptressofficial.bandcamp.com/album/hear</var>
+<status status="PASS" start="2026-02-12T08:43:18.433843" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.434191" elapsed="0.000109"/>
+</kw>
+<var name="${line}">https://newmiserableexperience.bandcamp.com/album/gild-the-lily</var>
+<status status="PASS" start="2026-02-12T08:43:18.434129" elapsed="0.000210"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.434470" elapsed="0.000118"/>
+</kw>
+<var name="${line}">https://manaus.bandcamp.com/album/disappearing</var>
+<status status="PASS" start="2026-02-12T08:43:18.434410" elapsed="0.000217"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.434758" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://juodvarnis.bandcamp.com/album/t-km-s</var>
+<status status="PASS" start="2026-02-12T08:43:18.434698" elapsed="0.000210"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.435038" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://hamasaari.bandcamp.com/album/pictures</var>
+<status status="PASS" start="2026-02-12T08:43:18.434978" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.435326" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://niechec.bandcamp.com/album/reckless-things</var>
+<status status="PASS" start="2026-02-12T08:43:18.435263" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.435606" elapsed="0.000120"/>
+</kw>
+<var name="${line}">https://finalgasp.bandcamp.com/album/new-day-symptoms</var>
+<status status="PASS" start="2026-02-12T08:43:18.435546" elapsed="0.000219"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.435896" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://20buckspin.bandcamp.com/album/changelings</var>
+<status status="PASS" start="2026-02-12T08:43:18.435836" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.436184" elapsed="0.000116"/>
+</kw>
+<var name="${line}">https://abhorrentexpanse.bandcamp.com/album/enter-the-misanthropocene</var>
+<status status="PASS" start="2026-02-12T08:43:18.436124" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.436470" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://baestband.bandcamp.com/album/colossal-24-bit-hd-audio</var>
+<status status="PASS" start="2026-02-12T08:43:18.436410" elapsed="0.000215"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.436757" elapsed="0.000115"/>
+</kw>
+<var name="${line}">https://castrator.bandcamp.com/album/coronation-of-the-grotesque</var>
+<status status="PASS" start="2026-02-12T08:43:18.436696" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.437041" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://h-e-x.bandcamp.com/album/ii</var>
+<status status="PASS" start="2026-02-12T08:43:18.436981" elapsed="0.000288"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.437411" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://marissanadler.bandcamp.com/album/new-radiations</var>
+<status status="PASS" start="2026-02-12T08:43:18.437348" elapsed="0.000216"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.437703" elapsed="0.000116"/>
+</kw>
+<var name="${line}">https://thetruepanopticon.bandcamp.com/album/laurentian-blue</var>
+<status status="PASS" start="2026-02-12T08:43:18.437635" elapsed="0.000224"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.437994" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://bindrunerecordings.bandcamp.com/album/songs-of-hiraeth</var>
+<status status="PASS" start="2026-02-12T08:43:18.437932" elapsed="0.000214"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.438283" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://officialphosphorus.bandcamp.com/album/frail-grasp-of-broken-hands</var>
+<status status="PASS" start="2026-02-12T08:43:18.438218" elapsed="0.000218"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.438568" elapsed="0.000114"/>
+</kw>
+<var name="${line}">https://pile.bandcamp.com/album/sunshine-and-balance-beams</var>
+<status status="PASS" start="2026-02-12T08:43:18.438508" elapsed="0.000213"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.438853" elapsed="0.000113"/>
+</kw>
+<var name="${line}">https://plaiins.bandcamp.com/album/sports-bar</var>
+<status status="PASS" start="2026-02-12T08:43:18.438792" elapsed="0.000212"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.439135" elapsed="0.000297"/>
+</kw>
+<var name="${line}">https://holygoatrecords.bandcamp.com/album/have-mind-will-travel-2</var>
+<status status="PASS" start="2026-02-12T08:43:18.439074" elapsed="0.000399"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.439610" elapsed="0.000124"/>
+</kw>
+<var name="${line}">https://alltidallena.bandcamp.com/album/opus</var>
+<status status="PASS" start="2026-02-12T08:43:18.439547" elapsed="0.000227"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.439906" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://baptistebrun.bandcamp.com/album/elevatio</var>
+<status status="PASS" start="2026-02-12T08:43:18.439845" elapsed="0.000210"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.440187" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://barshasketh.bandcamp.com/album/antinomian</var>
+<status status="PASS" start="2026-02-12T08:43:18.440126" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.440465" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://denude.bandcamp.com/album/a</var>
+<status status="PASS" start="2026-02-12T08:43:18.440406" elapsed="0.000207"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.440742" elapsed="0.000109"/>
+</kw>
+<var name="${line}">https://faithxtractor.bandcamp.com/album/loathing</var>
+<status status="PASS" start="2026-02-12T08:43:18.440683" elapsed="0.000206"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.441019" elapsed="0.000108"/>
+</kw>
+<var name="${line}">https://gnostician.bandcamp.com/album/unification-as-an-art</var>
+<status status="PASS" start="2026-02-12T08:43:18.440959" elapsed="0.000207"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.441295" elapsed="0.000109"/>
+</kw>
+<var name="${line}">https://harvst.bandcamp.com/album/mahlstrom</var>
+<status status="PASS" start="2026-02-12T08:43:18.441236" elapsed="0.000206"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.441571" elapsed="0.000117"/>
+</kw>
+<var name="${line}">https://hauntedhorses.bandcamp.com/album/dweller</var>
+<status status="PASS" start="2026-02-12T08:43:18.441511" elapsed="0.000216"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.441857" elapsed="0.000110"/>
+</kw>
+<var name="${line}">https://lordalienoire.bandcamp.com/album/delusion</var>
+<status status="PASS" start="2026-02-12T08:43:18.441797" elapsed="0.000210"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.442137" elapsed="0.000112"/>
+</kw>
+<var name="${line}">https://obscuresphinx.bandcamp.com/album/emovere</var>
+<status status="PASS" start="2026-02-12T08:43:18.442077" elapsed="0.000211"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.442420" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://simulationdefect.bandcamp.com/album/simulation</var>
+<status status="PASS" start="2026-02-12T08:43:18.442359" elapsed="0.000211"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.442700" elapsed="0.000111"/>
+</kw>
+<var name="${line}">https://sharptonerecords.bandcamp.com/album/keep-planting-flowers</var>
+<status status="PASS" start="2026-02-12T08:43:18.442640" elapsed="0.000209"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.442979" elapsed="0.000109"/>
+</kw>
+<var name="${line}">https://exilant.bandcamp.com/album/arcadia-forlorn</var>
+<status status="PASS" start="2026-02-12T08:43:18.442919" elapsed="0.000207"/>
+</iter>
+<iter>
+<kw name="Append To List" owner="Collections">
+<arg>${urls}</arg>
+<arg>${line}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.460759" elapsed="0.000188"/>
+</kw>
+<var name="${line}">https://thehaloeffectse.bandcamp.com/album/march-of-the-unheard</var>
+<status status="PASS" start="2026-02-12T08:43:18.460608" elapsed="0.000393"/>
+</iter>
+<var>${line}</var>
+<value>@{lines.splitlines()}</value>
+<status status="PASS" start="2026-02-12T08:43:18.413650" elapsed="0.047393"/>
+</for>
+<return>
+<value>${urls}</value>
+<status status="PASS" start="2026-02-12T08:43:18.461116" elapsed="0.000054"/>
+</return>
+<msg time="2026-02-12T08:43:18.461332" level="INFO">${urls} = ['https://immortalfrostproductions1.bandcamp.com/album/vampyric-war-in-blood', 'https://immortalfrostproductions1.bandcamp.com/album/castle-inside-the-eclipse', 'https://immortalfrostproductions1.band...</msg>
+<var>${urls}</var>
+<status status="PASS" start="2026-02-12T08:43:18.412262" elapsed="0.049096"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:18.462375" level="INFO" html="true">Created file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.461636" elapsed="0.000795"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:18.463190" level="INFO" html="true">Created file '&lt;a href="file://D:\automatizacion\nemesis-automation\failed_pages.txt"&gt;D:\automatizacion\nemesis-automation\failed_pages.txt&lt;/a&gt;'.</msg>
+<arg>${FAILED_FILE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.462641" elapsed="0.000601"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:18.463914" level="INFO" html="true">Created file '&lt;a href="file://D:\automatizacion\nemesis-automation\missing_tracks.txt"&gt;D:\automatizacion\nemesis-automation\missing_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${MISSING_FILE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.463398" elapsed="0.000572"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:18.464281" level="INFO" html="true">Directory '&lt;a href="file://D:\automatizacion\nemesis-automation\covers"&gt;D:\automatizacion\nemesis-automation\covers&lt;/a&gt;' already exists.</msg>
+<arg>${IMAGE_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.464146" elapsed="0.000181"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:18.465341" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000028810698AD0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.464522" elapsed="0.000850"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.465541" elapsed="0.000123"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.465806" elapsed="0.000111"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:18.466286" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-12T08:43:18.466082" elapsed="1.516242"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-12T08:43:19.982769" elapsed="0.033585"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:20.016984" level="INFO">${contador} = 1</msg>
+<var>${contador}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:20.016722" elapsed="0.000292"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Procesando: ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:20.017618" elapsed="0.000261"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:20.018087" level="INFO">Opening url 'https://immortalfrostproductions1.bandcamp.com/album/vampyric-war-in-blood'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T08:43:20.017978" elapsed="2.262940"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:25.281925" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:22.281114" elapsed="3.001064"/>
+</kw>
+<kw name="Aceptar Cookies Si Aparece">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔍 Buscando popup de cookies (Shadow DOM)...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:25.283873" elapsed="0.000793"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:25.287799" level="INFO">Executing JavaScript:
+let all = document.querySelectorAll('*');for (let el of all) {if (el.shadowRoot) {let btn = el.shadowRoot.querySelector('button');if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {btn.click();return 'CLICKED';}}}return 'NOT_FOUND';
+Without any arguments.</msg>
+<msg time="2026-02-12T08:43:25.329194" level="INFO">${result} = CLICKED</msg>
+<var>${result}</var>
+<arg>let all = document.querySelectorAll('*');</arg>
+<arg>for (let el of all) {</arg>
+<arg>if (el.shadowRoot) {</arg>
+<arg>let btn = el.shadowRoot.querySelector('button');</arg>
+<arg>if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {</arg>
+<arg>btn.click();</arg>
+<arg>return 'CLICKED';</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>return 'NOT_FOUND';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T08:43:25.285091" elapsed="0.044182"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Resultado cookies: ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:25.329571" elapsed="0.000582"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Iteración: ${contador}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:25.330396" elapsed="0.000499"/>
+</kw>
+<if>
+<branch type="IF" condition="'${result}' == 'NOT_FOUND' and ${contador} == 1">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>⚠️ No apareció popup en la primera URL, se continúa</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:25.332416" elapsed="0.000066"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:25.331107" elapsed="0.001485"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:25.331052" elapsed="0.001635"/>
+</if>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2026-02-12T08:43:25.332768" elapsed="0.000193"/>
+</return>
+<msg time="2026-02-12T08:43:25.333251" level="INFO">${cookie_result} = CLICKED</msg>
+<var>${cookie_result}</var>
+<arg>${contador}</arg>
+<status status="PASS" start="2026-02-12T08:43:25.282932" elapsed="0.050374"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:25.333897" level="INFO">${contador} = 2</msg>
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:25.333509" elapsed="0.000445"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:28.334551" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:25.334142" elapsed="3.000509"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.334962" elapsed="0.104365"/>
+</kw>
+<msg time="2026-02-12T08:43:28.439479" level="INFO">${page_ok} = True</msg>
+<var>${page_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.334808" elapsed="0.104698"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${page_ok}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Página no cargó correctamente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:28.439815" elapsed="0.000029"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${FAILED_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:28.439922" elapsed="0.000023"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:28.440018" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:28.439612" elapsed="0.000457"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:28.439584" elapsed="0.000521"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.453568" level="INFO">${album_title} = Vampyric War in Blood</msg>
+<var>${album_title}</var>
+<arg>css:.trackTitle</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.440178" elapsed="0.013432"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.453891" elapsed="0.013232"/>
+</kw>
+<msg time="2026-02-12T08:43:28.467302" level="INFO">${artist_ok} = True</msg>
+<var>${artist_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.453751" elapsed="0.013579"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${artist_ok}">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:28.467609" elapsed="0.000026"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:28.467714" elapsed="0.000024"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:28.467425" elapsed="0.000344"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:28.467401" elapsed="0.000401"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.478383" level="INFO">${artist} = Bloedmaan</msg>
+<var>${artist}</var>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.467873" elapsed="0.010557"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.495077" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>\n### ${artist} - ${album_title} (${url}) ###\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.478577" elapsed="0.016633"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.495519" elapsed="0.007701"/>
+</kw>
+<msg time="2026-02-12T08:43:28.503356" level="INFO">${cover_exists} = True</msg>
+<var>${cover_exists}</var>
+<arg>Get WebElement</arg>
+<arg>css:#tralbumArt img</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.495376" elapsed="0.008007"/>
+</kw>
+<if>
+<branch type="IF" condition="${cover_exists}">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.508212" level="INFO">${cover_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.353")&gt;</msg>
+<var>${cover_element}</var>
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.503622" elapsed="0.004624"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.516214" level="INFO">${cover_url} = https://f4.bcbits.com/img/a2890413342_16.jpg</msg>
+<var>${cover_url}</var>
+<arg>${cover_element}</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.508365" elapsed="0.007888"/>
+</kw>
+<kw name="Descargar Imagen">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:28.517470" level="INFO">${safe_artist} = Bloedmaan</msg>
+<var>${safe_artist}</var>
+<arg>"${artist}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.516724" elapsed="0.000776"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:28.518091" level="INFO">${safe_album} = Vampyric_War_in_Blood</msg>
+<var>${safe_album}</var>
+<arg>"${album_title}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.517593" elapsed="0.000526"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:28.518374" level="INFO">${image_file} = covers/Bloedmaan_-_Vampyric_War_in_Blood.jpg</msg>
+<var>${image_file}</var>
+<arg>${IMAGE_DIR}/${safe_artist}_-_${safe_album}.jpg</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.518211" elapsed="0.000186"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:28.518614" level="INFO">${cmd} = (lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("https://f4.bcbits.com/img/a2890413342_16.jpg", "covers/Bloedmaan_-_Vampyric_War_in_Blood.jpg")</msg>
+<var>${cmd}</var>
+<arg>(lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("${url}", "${image_file}")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.518479" elapsed="0.000215"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<arg>${cmd}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.518781" elapsed="0.083793"/>
+</kw>
+<arg>${cover_url}</arg>
+<arg>${artist}</arg>
+<arg>${album_title}</arg>
+<status status="PASS" start="2026-02-12T08:43:28.516429" elapsed="0.086262"/>
+</kw>
+<status status="PASS" start="2026-02-12T08:43:28.503476" elapsed="0.099260"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:28.503453" elapsed="0.099328"/>
+</if>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.611659" level="INFO">${tracks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2157")&gt;, &lt;selenium.webdr...</msg>
+<var>${tracks}</var>
+<arg>css:.track_list .title a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.602887" elapsed="0.008821"/>
+</kw>
+<if>
+<branch type="IF" condition="$tracks == []">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:28.612034" elapsed="0.000028"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:28.612142" elapsed="0.000023"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:28.611820" elapsed="0.000376"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:28.611798" elapsed="0.000432"/>
+</if>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.619112" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/intro-5</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.612489" elapsed="0.006658"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.619764" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.619256" elapsed="0.000564"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2157")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.612409" elapsed="0.007455"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.625364" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/vampyric-war-in-blood</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.620046" elapsed="0.005347"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.625908" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.625494" elapsed="0.000470"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2199")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.619967" elapsed="0.006041"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.631744" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/return-to-castlevania</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.626189" elapsed="0.005595"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.632440" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.631913" elapsed="0.000589"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2241")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.626106" elapsed="0.006443"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.638508" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/the-clock-tower</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.632744" elapsed="0.005801"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.639203" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.638667" elapsed="0.000598"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2283")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.632658" elapsed="0.006653"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.644815" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/what-a-horrible-night-to-have-a-curse</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.639506" elapsed="0.005346"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.645454" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.644972" elapsed="0.000537"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2325")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.639420" elapsed="0.006134"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.651275" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/commander-of-spectral-forces</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.645784" elapsed="0.005523"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.651863" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.651413" elapsed="0.000504"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2366")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.645699" elapsed="0.006262"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.657149" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/outro</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.652144" elapsed="0.005035"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.657714" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.657286" elapsed="0.000484"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2408")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.652062" elapsed="0.005752"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.663235" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/rise-of-the-blood-moon</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.657997" elapsed="0.005277"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:28.663909" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.663402" elapsed="0.000563"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4667A9C996A4AC0E14922ED417AA15DF.e.2450")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:28.657914" elapsed="0.006097"/>
+</iter>
+<var>${track}</var>
+<value>@{tracks}</value>
+<status status="PASS" start="2026-02-12T08:43:28.612267" elapsed="0.051790"/>
+</for>
+<var name="${url}">https://immortalfrostproductions1.bandcamp.com/album/vampyric-war-in-blood</var>
+<status status="PASS" start="2026-02-12T08:43:20.017526" elapsed="8.646583"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Procesando: ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.664434" elapsed="0.000227"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:28.664883" level="INFO">Opening url 'https://immortalfrostproductions1.bandcamp.com/album/castle-inside-the-eclipse'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T08:43:28.664769" elapsed="1.528324"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:33.193623" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:30.193248" elapsed="3.000485"/>
+</kw>
+<kw name="Aceptar Cookies Si Aparece">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔍 Buscando popup de cookies (Shadow DOM)...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:33.194240" elapsed="0.000201"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:33.194962" level="INFO">Executing JavaScript:
+let all = document.querySelectorAll('*');for (let el of all) {if (el.shadowRoot) {let btn = el.shadowRoot.querySelector('button');if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {btn.click();return 'CLICKED';}}}return 'NOT_FOUND';
+Without any arguments.</msg>
+<msg time="2026-02-12T08:43:33.201642" level="INFO">${result} = NOT_FOUND</msg>
+<var>${result}</var>
+<arg>let all = document.querySelectorAll('*');</arg>
+<arg>for (let el of all) {</arg>
+<arg>if (el.shadowRoot) {</arg>
+<arg>let btn = el.shadowRoot.querySelector('button');</arg>
+<arg>if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {</arg>
+<arg>btn.click();</arg>
+<arg>return 'CLICKED';</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>return 'NOT_FOUND';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T08:43:33.194551" elapsed="0.007131"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Resultado cookies: ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:33.201829" elapsed="0.000242"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Iteración: ${contador}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:33.202179" elapsed="0.000203"/>
+</kw>
+<if>
+<branch type="IF" condition="'${result}' == 'NOT_FOUND' and ${contador} == 1">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>⚠️ No apareció popup en la primera URL, se continúa</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:33.203342" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:33.202474" elapsed="0.000941"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:33.202452" elapsed="0.000999"/>
+</if>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2026-02-12T08:43:33.203486" elapsed="0.000039"/>
+</return>
+<msg time="2026-02-12T08:43:33.203654" level="INFO">${cookie_result} = NOT_FOUND</msg>
+<var>${cookie_result}</var>
+<arg>${contador}</arg>
+<status status="PASS" start="2026-02-12T08:43:33.193966" elapsed="0.009715"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:33.203993" level="INFO">${contador} = 3</msg>
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:33.203791" elapsed="0.000227"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:36.204716" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:33.204115" elapsed="3.000785"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.205209" elapsed="0.041127"/>
+</kw>
+<msg time="2026-02-12T08:43:36.246478" level="INFO">${page_ok} = True</msg>
+<var>${page_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.205063" elapsed="0.041442"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${page_ok}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Página no cargó correctamente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:36.246789" elapsed="0.000027"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${FAILED_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:36.246895" elapsed="0.000023"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:36.246991" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:36.246601" elapsed="0.000443"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:36.246578" elapsed="0.000501"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.258305" level="INFO">${album_title} = Castle Inside the Eclipse</msg>
+<var>${album_title}</var>
+<arg>css:.trackTitle</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.247156" elapsed="0.011192"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.258806" elapsed="0.011094"/>
+</kw>
+<msg time="2026-02-12T08:43:36.270037" level="INFO">${artist_ok} = True</msg>
+<var>${artist_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.258598" elapsed="0.011466"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${artist_ok}">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:36.270359" elapsed="0.000028"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:36.270470" elapsed="0.000024"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:36.270167" elapsed="0.000356"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:36.270144" elapsed="0.000413"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.280995" level="INFO">${artist} = Bloedmaan</msg>
+<var>${artist}</var>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.270630" elapsed="0.010410"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:36.281793" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>\n### ${artist} - ${album_title} (${url}) ###\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.281182" elapsed="0.000672"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.282106" elapsed="0.004456"/>
+</kw>
+<msg time="2026-02-12T08:43:36.286724" level="INFO">${cover_exists} = True</msg>
+<var>${cover_exists}</var>
+<arg>Get WebElement</arg>
+<arg>css:#tralbumArt img</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.281969" elapsed="0.004783"/>
+</kw>
+<if>
+<branch type="IF" condition="${cover_exists}">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.291341" level="INFO">${cover_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.0AD2A1594A9BDF7E4AAC3CB8AF295A4E.e.3279")&gt;</msg>
+<var>${cover_element}</var>
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.286977" elapsed="0.004407"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.297655" level="INFO">${cover_url} = https://f4.bcbits.com/img/a3362952534_16.jpg</msg>
+<var>${cover_url}</var>
+<arg>${cover_element}</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.291524" elapsed="0.006172"/>
+</kw>
+<kw name="Descargar Imagen">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:36.298391" level="INFO">${safe_artist} = Bloedmaan</msg>
+<var>${safe_artist}</var>
+<arg>"${artist}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.298171" elapsed="0.000245"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:36.299271" level="INFO">${safe_album} = Castle_Inside_the_Eclipse</msg>
+<var>${safe_album}</var>
+<arg>"${album_title}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.298504" elapsed="0.000796"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:36.299565" level="INFO">${image_file} = covers/Bloedmaan_-_Castle_Inside_the_Eclipse.jpg</msg>
+<var>${image_file}</var>
+<arg>${IMAGE_DIR}/${safe_artist}_-_${safe_album}.jpg</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.299397" elapsed="0.000192"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:36.299818" level="INFO">${cmd} = (lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("https://f4.bcbits.com/img/a3362952534_16.jpg", "covers/Bloedmaan_-_Castle_Inside_the_Eclipse.jpg")</msg>
+<var>${cmd}</var>
+<arg>(lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("${url}", "${image_file}")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.299675" elapsed="0.000167"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<arg>${cmd}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.299924" elapsed="0.065997"/>
+</kw>
+<arg>${cover_url}</arg>
+<arg>${artist}</arg>
+<arg>${album_title}</arg>
+<status status="PASS" start="2026-02-12T08:43:36.297886" elapsed="0.068172"/>
+</kw>
+<status status="PASS" start="2026-02-12T08:43:36.286842" elapsed="0.079308"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:36.286820" elapsed="0.079376"/>
+</if>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.441226" level="INFO">${tracks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.0AD2A1594A9BDF7E4AAC3CB8AF295A4E.e.3388")&gt;, &lt;selenium.webdr...</msg>
+<var>${tracks}</var>
+<arg>css:.track_list .title a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.366316" elapsed="0.074953"/>
+</kw>
+<if>
+<branch type="IF" condition="$tracks == []">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:36.441579" elapsed="0.000026"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:36.441683" elapsed="0.000024"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:36.441378" elapsed="0.000358"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:36.441355" elapsed="0.000416"/>
+</if>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.468303" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/the-night-of-blood</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.442020" elapsed="0.026338"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:36.469241" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.468533" elapsed="0.000791"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.0AD2A1594A9BDF7E4AAC3CB8AF295A4E.e.3388")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:36.441940" elapsed="0.027442"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.475357" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/cursed-charms-of-death</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.469603" elapsed="0.005797"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:36.476059" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.475546" elapsed="0.000572"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.0AD2A1594A9BDF7E4AAC3CB8AF295A4E.e.3446")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:36.469502" elapsed="0.006670"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.481875" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/haunted-melancholic-obsessions</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.476378" elapsed="0.005535"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:36.482528" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.482041" elapsed="0.000542"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.0AD2A1594A9BDF7E4AAC3CB8AF295A4E.e.3504")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:36.476289" elapsed="0.006339"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.488054" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/winged-flight-under-the-pale-moon</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.482818" elapsed="0.005274"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:36.488689" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.488213" elapsed="0.000529"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.0AD2A1594A9BDF7E4AAC3CB8AF295A4E.e.3562")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:36.482733" elapsed="0.006054"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.494514" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/the-hunters-dream</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.488980" elapsed="0.005581"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:36.495251" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.494706" elapsed="0.000609"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.0AD2A1594A9BDF7E4AAC3CB8AF295A4E.e.3620")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:36.488893" elapsed="0.006470"/>
+</iter>
+<var>${track}</var>
+<value>@{tracks}</value>
+<status status="PASS" start="2026-02-12T08:43:36.441808" elapsed="0.053600"/>
+</for>
+<var name="${url}">https://immortalfrostproductions1.bandcamp.com/album/castle-inside-the-eclipse</var>
+<status status="PASS" start="2026-02-12T08:43:28.664355" elapsed="7.831101"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Procesando: ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.495795" elapsed="0.000229"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:36.496313" level="INFO">Opening url 'https://immortalfrostproductions1.bandcamp.com/album/onrust'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T08:43:36.496181" elapsed="1.096854"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:40.593479" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:37.593206" elapsed="3.000372"/>
+</kw>
+<kw name="Aceptar Cookies Si Aparece">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔍 Buscando popup de cookies (Shadow DOM)...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:40.594058" elapsed="0.000214"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:40.594922" level="INFO">Executing JavaScript:
+let all = document.querySelectorAll('*');for (let el of all) {if (el.shadowRoot) {let btn = el.shadowRoot.querySelector('button');if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {btn.click();return 'CLICKED';}}}return 'NOT_FOUND';
+Without any arguments.</msg>
+<msg time="2026-02-12T08:43:40.601011" level="INFO">${result} = NOT_FOUND</msg>
+<var>${result}</var>
+<arg>let all = document.querySelectorAll('*');</arg>
+<arg>for (let el of all) {</arg>
+<arg>if (el.shadowRoot) {</arg>
+<arg>let btn = el.shadowRoot.querySelector('button');</arg>
+<arg>if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {</arg>
+<arg>btn.click();</arg>
+<arg>return 'CLICKED';</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>return 'NOT_FOUND';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T08:43:40.594407" elapsed="0.006641"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Resultado cookies: ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:40.601197" elapsed="0.000224"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Iteración: ${contador}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:40.601513" elapsed="0.000199"/>
+</kw>
+<if>
+<branch type="IF" condition="'${result}' == 'NOT_FOUND' and ${contador} == 1">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>⚠️ No apareció popup en la primera URL, se continúa</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:40.602845" elapsed="0.000034"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:40.601823" elapsed="0.001104"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:40.601796" elapsed="0.001169"/>
+</if>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2026-02-12T08:43:40.603002" elapsed="0.000037"/>
+</return>
+<msg time="2026-02-12T08:43:40.603170" level="INFO">${cookie_result} = NOT_FOUND</msg>
+<var>${cookie_result}</var>
+<arg>${contador}</arg>
+<status status="PASS" start="2026-02-12T08:43:40.593805" elapsed="0.009390"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:40.603545" level="INFO">${contador} = 4</msg>
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:40.603300" elapsed="0.000272"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:43.604249" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:40.603663" elapsed="3.000705"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.604690" elapsed="0.014494"/>
+</kw>
+<msg time="2026-02-12T08:43:43.619329" level="INFO">${page_ok} = True</msg>
+<var>${page_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.604531" elapsed="0.014827"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${page_ok}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Página no cargó correctamente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:43.619639" elapsed="0.000029"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${FAILED_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:43.619752" elapsed="0.000024"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:43.619852" elapsed="0.000023"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:43.619449" elapsed="0.000456"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:43.619427" elapsed="0.000517"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.631283" level="INFO">${album_title} = Onrust</msg>
+<var>${album_title}</var>
+<arg>css:.trackTitle</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.620021" elapsed="0.011310"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.631632" elapsed="0.012598"/>
+</kw>
+<msg time="2026-02-12T08:43:43.644398" level="INFO">${artist_ok} = True</msg>
+<var>${artist_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.631484" elapsed="0.012943"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${artist_ok}">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:43.644985" elapsed="0.000037"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:43.645144" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:43.644546" elapsed="0.000664"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:43.644512" elapsed="0.000739"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.656910" level="INFO">${artist} = Drawn Into Descent</msg>
+<var>${artist}</var>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.645339" elapsed="0.011613"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:43.657766" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>\n### ${artist} - ${album_title} (${url}) ###\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.657099" elapsed="0.000736"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.658154" elapsed="0.008060"/>
+</kw>
+<msg time="2026-02-12T08:43:43.666346" level="INFO">${cover_exists} = True</msg>
+<var>${cover_exists}</var>
+<arg>Get WebElement</arg>
+<arg>css:#tralbumArt img</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.658022" elapsed="0.008351"/>
+</kw>
+<if>
+<branch type="IF" condition="${cover_exists}">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.671535" level="INFO">${cover_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.B3E74D63D8F44787BF506446EBF9FA01.e.6374")&gt;</msg>
+<var>${cover_element}</var>
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.666599" elapsed="0.004977"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.677542" level="INFO">${cover_url} = https://f4.bcbits.com/img/a2068318802_16.jpg</msg>
+<var>${cover_url}</var>
+<arg>${cover_element}</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.671717" elapsed="0.005866"/>
+</kw>
+<kw name="Descargar Imagen">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:43.678987" level="INFO">${safe_artist} = Drawn_Into_Descent</msg>
+<var>${safe_artist}</var>
+<arg>"${artist}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.678100" elapsed="0.000924"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:43.679693" level="INFO">${safe_album} = Onrust</msg>
+<var>${safe_album}</var>
+<arg>"${album_title}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.679132" elapsed="0.000592"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:43.680009" level="INFO">${image_file} = covers/Drawn_Into_Descent_-_Onrust.jpg</msg>
+<var>${image_file}</var>
+<arg>${IMAGE_DIR}/${safe_artist}_-_${safe_album}.jpg</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.679830" elapsed="0.000204"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:43.680257" level="INFO">${cmd} = (lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("https://f4.bcbits.com/img/a2068318802_16.jpg", "covers/Drawn_Into_Descent_-_Onrust.jpg")</msg>
+<var>${cmd}</var>
+<arg>(lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("${url}", "${image_file}")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.680119" elapsed="0.000162"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<arg>${cmd}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.680364" elapsed="0.071568"/>
+</kw>
+<arg>${cover_url}</arg>
+<arg>${artist}</arg>
+<arg>${album_title}</arg>
+<status status="PASS" start="2026-02-12T08:43:43.677754" elapsed="0.074302"/>
+</kw>
+<status status="PASS" start="2026-02-12T08:43:43.666460" elapsed="0.085641"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:43.666437" elapsed="0.085707"/>
+</if>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.758588" level="INFO">${tracks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.B3E74D63D8F44787BF506446EBF9FA01.e.6143")&gt;, &lt;selenium.webdr...</msg>
+<var>${tracks}</var>
+<arg>css:.track_list .title a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.752253" elapsed="0.006393"/>
+</kw>
+<if>
+<branch type="IF" condition="$tracks == []">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:43.759055" elapsed="0.000031"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:43.759175" elapsed="0.000024"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:43.758789" elapsed="0.000441"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:43.758758" elapsed="0.000507"/>
+</if>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.765583" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/onrust</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.759536" elapsed="0.006091"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:43.766485" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.765778" elapsed="0.000778"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.B3E74D63D8F44787BF506446EBF9FA01.e.6143")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:43.759454" elapsed="0.007153"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.772556" level="INFO">${track_url} = https://immortalfrostproductions1.bandcamp.com/track/ogen</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.766838" elapsed="0.005764"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:43.773249" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.772747" elapsed="0.000570"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.B3E74D63D8F44787BF506446EBF9FA01.e.6200")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:43.766742" elapsed="0.006628"/>
+</iter>
+<var>${track}</var>
+<value>@{tracks}</value>
+<status status="PASS" start="2026-02-12T08:43:43.759305" elapsed="0.014117"/>
+</for>
+<var name="${url}">https://immortalfrostproductions1.bandcamp.com/album/onrust</var>
+<status status="PASS" start="2026-02-12T08:43:36.495714" elapsed="7.277757"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Procesando: ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.773829" elapsed="0.000284"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:43.774421" level="INFO">Opening url 'https://silentiuminforestarecords.bandcamp.com/album/m-ldeponie-the-lord-of-time-sold-out'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T08:43:43.774294" elapsed="2.130072"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:48.905401" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:45.904595" elapsed="3.001154"/>
+</kw>
+<kw name="Aceptar Cookies Si Aparece">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔍 Buscando popup de cookies (Shadow DOM)...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:48.907913" elapsed="0.001105"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:48.911518" level="INFO">Executing JavaScript:
+let all = document.querySelectorAll('*');for (let el of all) {if (el.shadowRoot) {let btn = el.shadowRoot.querySelector('button');if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {btn.click();return 'CLICKED';}}}return 'NOT_FOUND';
+Without any arguments.</msg>
+<msg time="2026-02-12T08:43:48.940497" level="INFO">${result} = NOT_FOUND</msg>
+<var>${result}</var>
+<arg>let all = document.querySelectorAll('*');</arg>
+<arg>for (let el of all) {</arg>
+<arg>if (el.shadowRoot) {</arg>
+<arg>let btn = el.shadowRoot.querySelector('button');</arg>
+<arg>if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {</arg>
+<arg>btn.click();</arg>
+<arg>return 'CLICKED';</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>return 'NOT_FOUND';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T08:43:48.909635" elapsed="0.031038"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Resultado cookies: ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:48.941395" elapsed="0.001296"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Iteración: ${contador}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:48.943285" elapsed="0.001150"/>
+</kw>
+<if>
+<branch type="IF" condition="'${result}' == 'NOT_FOUND' and ${contador} == 1">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>⚠️ No apareció popup en la primera URL, se continúa</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:48.947498" elapsed="0.000101"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:48.944926" elapsed="0.002778"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:48.944808" elapsed="0.002978"/>
+</if>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2026-02-12T08:43:48.947863" elapsed="0.000078"/>
+</return>
+<msg time="2026-02-12T08:43:48.948231" level="INFO">${cookie_result} = NOT_FOUND</msg>
+<var>${cookie_result}</var>
+<arg>${contador}</arg>
+<status status="PASS" start="2026-02-12T08:43:48.906687" elapsed="0.041600"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:48.948892" level="INFO">${contador} = 5</msg>
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:48.948493" elapsed="0.000455"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:51.950419" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:48.949155" elapsed="3.001630"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:51.952107" elapsed="0.082664"/>
+</kw>
+<msg time="2026-02-12T08:43:52.035335" level="INFO">${page_ok} = True</msg>
+<var>${page_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:51.951405" elapsed="0.084066"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${page_ok}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Página no cargó correctamente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:52.036775" elapsed="0.000142"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${FAILED_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:52.037345" elapsed="0.000149"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:52.037961" elapsed="0.000128"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:52.035948" elapsed="0.002309"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:52.035856" elapsed="0.002579"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.094943" level="INFO">${album_title} = Müldeponie - The Lord Of Time -Sold Out-</msg>
+<var>${album_title}</var>
+<arg>css:.trackTitle</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.038808" elapsed="0.056262"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.096093" elapsed="0.025736"/>
+</kw>
+<msg time="2026-02-12T08:43:52.122080" level="INFO">${artist_ok} = True</msg>
+<var>${artist_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.095519" elapsed="0.026619"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${artist_ok}">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:52.122690" elapsed="0.000061"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:52.122936" elapsed="0.000054"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:52.122329" elapsed="0.000733"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:52.122288" elapsed="0.000867"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.136622" level="INFO">${artist} = SIF073</msg>
+<var>${artist}</var>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.123315" elapsed="0.013343"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.137362" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>\n### ${artist} - ${album_title} (${url}) ###\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.136779" elapsed="0.000640"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.137690" elapsed="0.003920"/>
+</kw>
+<msg time="2026-02-12T08:43:52.141709" level="INFO">${cover_exists} = True</msg>
+<var>${cover_exists}</var>
+<arg>Get WebElement</arg>
+<arg>css:#tralbumArt img</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.137569" elapsed="0.004164"/>
+</kw>
+<if>
+<branch type="IF" condition="${cover_exists}">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.146097" level="INFO">${cover_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.8680")&gt;</msg>
+<var>${cover_element}</var>
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.141928" elapsed="0.004205"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.151497" level="INFO">${cover_url} = https://f4.bcbits.com/img/a0234083127_16.jpg</msg>
+<var>${cover_url}</var>
+<arg>${cover_element}</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.146251" elapsed="0.005280"/>
+</kw>
+<kw name="Descargar Imagen">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:52.152662" level="INFO">${safe_artist} = SIF073</msg>
+<var>${safe_artist}</var>
+<arg>"${artist}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.151957" elapsed="0.000734"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:52.153276" level="INFO">${safe_album} = Müldeponie_-_The_Lord_Of_Time_-Sold_Out-</msg>
+<var>${safe_album}</var>
+<arg>"${album_title}".replace(" ", "_").replace("/", "_")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.152786" elapsed="0.000519"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:52.153563" level="INFO">${image_file} = covers/SIF073_-_Müldeponie_-_The_Lord_Of_Time_-Sold_Out-.jpg</msg>
+<var>${image_file}</var>
+<arg>${IMAGE_DIR}/${safe_artist}_-_${safe_album}.jpg</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.153399" elapsed="0.000189"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T08:43:52.153811" level="INFO">${cmd} = (lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("https://f4.bcbits.com/img/a0234083127_16.jpg", "covers/SIF073_-_Müldeponie_-_The_Lord_Of_Time_-Sold_Out-.jpg")</msg>
+<var>${cmd}</var>
+<arg>(lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("${url}", "${image_file}")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.153673" elapsed="0.000161"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<arg>${cmd}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.153918" elapsed="0.056200"/>
+</kw>
+<arg>${cover_url}</arg>
+<arg>${artist}</arg>
+<arg>${album_title}</arg>
+<status status="PASS" start="2026-02-12T08:43:52.151681" elapsed="0.058538"/>
+</kw>
+<status status="PASS" start="2026-02-12T08:43:52.141813" elapsed="0.068449"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:52.141795" elapsed="0.068508"/>
+</if>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.215975" level="INFO">${tracks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10375")&gt;, &lt;selenium.webd...</msg>
+<var>${tracks}</var>
+<arg>css:.track_list .title a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.210401" elapsed="0.005615"/>
+</kw>
+<if>
+<branch type="IF" condition="$tracks == []">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:52.216310" elapsed="0.000028"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:52.216420" elapsed="0.000028"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:52.216119" elapsed="0.000360"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:52.216097" elapsed="0.000416"/>
+</if>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.221782" level="INFO">${track_url} = https://silentiuminforestarecords.bandcamp.com/track/introduction-in-time-and-ages</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.216758" elapsed="0.005055"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.222405" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.221914" elapsed="0.000545"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10375")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:52.216681" elapsed="0.005823"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.227674" level="INFO">${track_url} = https://silentiuminforestarecords.bandcamp.com/track/the-blue-nebulas-curse-and-the-monster-off-its-void</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.222678" elapsed="0.005030"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.228274" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.227834" elapsed="0.000502"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10417")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:52.222600" elapsed="0.005786"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.234067" level="INFO">${track_url} = https://silentiuminforestarecords.bandcamp.com/track/dragons-from-the-purest-lands</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.228624" elapsed="0.005484"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.234785" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.234292" elapsed="0.000549"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10459")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:52.228522" elapsed="0.006363"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.239939" level="INFO">${track_url} = https://silentiuminforestarecords.bandcamp.com/track/wanderer</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.235071" elapsed="0.004899"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.240480" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.240073" elapsed="0.000460"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10501")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:52.234990" elapsed="0.005587"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.247291" level="INFO">${track_url} = https://silentiuminforestarecords.bandcamp.com/track/death-of-an-old-space-and-memories</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.240747" elapsed="0.006584"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.247947" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.247459" elapsed="0.000543"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10543")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:52.240673" elapsed="0.007375"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.253217" level="INFO">${track_url} = https://silentiuminforestarecords.bandcamp.com/track/the-lord-of-time-an-unexpected-voice</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.248230" elapsed="0.005017"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.253749" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.253348" elapsed="0.000454"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10584")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:52.248152" elapsed="0.005695"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.258699" level="INFO">${track_url} = https://silentiuminforestarecords.bandcamp.com/track/echoes-dragonflies-disconnected-from-our-earth</msg>
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.254019" elapsed="0.004709"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-12T08:43:52.259225" level="INFO" html="true">Appended to file '&lt;a href="file://D:\automatizacion\nemesis-automation\bandcamp_tracks.txt"&gt;D:\automatizacion\nemesis-automation\bandcamp_tracks.txt&lt;/a&gt;'.</msg>
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.258828" elapsed="0.000450"/>
+</kw>
+<var name="${track}">&lt;selenium.webdriver.remote.webelement.WebElement (session="5c03da4fae66a621aa030b9cb15a3cb1", element="f.8E188667CE11B0190766514F646473CB.d.4D9D1994CB4FFC27C8C1E68AE3D71569.e.10626")&gt;</var>
+<status status="PASS" start="2026-02-12T08:43:52.253942" elapsed="0.005379"/>
+</iter>
+<var>${track}</var>
+<value>@{tracks}</value>
+<status status="PASS" start="2026-02-12T08:43:52.216550" elapsed="0.042814"/>
+</for>
+<var name="${url}">https://silentiuminforestarecords.bandcamp.com/album/m-ldeponie-the-lord-of-time-sold-out</var>
+<status status="PASS" start="2026-02-12T08:43:43.773738" elapsed="8.485671"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Procesando: ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.259727" elapsed="0.000258"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:52.260200" level="INFO">Opening url 'https://andallicansayis.bandcamp.com/album/these-hopes-are-long-lost'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T08:43:52.260093" elapsed="2.028885"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T08:43:57.290065" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T08:43:54.289222" elapsed="3.001056"/>
+</kw>
+<kw name="Aceptar Cookies Si Aparece">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔍 Buscando popup de cookies (Shadow DOM)...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:57.291572" elapsed="0.000642"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T08:43:57.293630" level="INFO">Executing JavaScript:
+let all = document.querySelectorAll('*');for (let el of all) {if (el.shadowRoot) {let btn = el.shadowRoot.querySelector('button');if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {btn.click();return 'CLICKED';}}}return 'NOT_FOUND';
+Without any arguments.</msg>
+<msg time="2026-02-12T08:43:57.314491" level="INFO">${result} = NOT_FOUND</msg>
+<var>${result}</var>
+<arg>let all = document.querySelectorAll('*');</arg>
+<arg>for (let el of all) {</arg>
+<arg>if (el.shadowRoot) {</arg>
+<arg>let btn = el.shadowRoot.querySelector('button');</arg>
+<arg>if (btn &amp;&amp; btn.innerText.includes('Aceptar todo')) {</arg>
+<arg>btn.click();</arg>
+<arg>return 'CLICKED';</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>}</arg>
+<arg>return 'NOT_FOUND';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T08:43:57.292556" elapsed="0.022038"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Resultado cookies: ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:57.315218" elapsed="0.000741"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Iteración: ${contador}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T08:43:57.316267" elapsed="0.001116"/>
+</kw>
+<if>
+<branch type="IF" condition="'${result}' == 'NOT_FOUND' and ${contador} == 1">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>⚠️ No apareció popup en la primera URL, se continúa</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:57.321018" elapsed="0.000153"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:57.317896" elapsed="0.003499"/>
+</branch>
+<status status="PASS" start="2026-02-12T08:43:57.317800" elapsed="0.003796"/>
+</if>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2026-02-12T08:43:57.321801" elapsed="0.000186"/>
+</return>
+<msg time="2026-02-12T08:43:57.322608" level="INFO">${cookie_result} = NOT_FOUND</msg>
+<var>${cookie_result}</var>
+<arg>${contador}</arg>
+<status status="PASS" start="2026-02-12T08:43:57.290875" elapsed="0.031867"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T08:43:57.324207" level="INFO">${contador} = 6</msg>
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T08:43:57.323228" elapsed="0.001119"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" start="2026-02-12T08:43:57.324821" elapsed="2.486934">Execution terminated by signal</status>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${page_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css:.trackTitle</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812013" elapsed="0.000044"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${page_ok}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Página no cargó correctamente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812357" elapsed="0.000039"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${FAILED_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812481" elapsed="0.000023"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812583" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812175" elapsed="0.000460"/>
+</branch>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812141" elapsed="0.000531"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${album_title}</var>
+<arg>css:.trackTitle</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812758" elapsed="0.000024"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${artist_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812870" elapsed="0.000022"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${artist_ok}">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813032" elapsed="0.000021"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813128" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812962" elapsed="0.000218"/>
+</branch>
+<status status="NOT RUN" start="2026-02-12T08:43:59.812947" elapsed="0.000266"/>
+</if>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${artist}</var>
+<arg>xpath=//*[@id="name-section"]//a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813278" elapsed="0.000023"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${OUTPUT_FILE}</arg>
+<arg>\n### ${artist} - ${album_title} (${url}) ###\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813370" elapsed="0.000036"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${cover_exists}</var>
+<arg>Get WebElement</arg>
+<arg>css:#tralbumArt img</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813494" elapsed="0.000025"/>
+</kw>
+<if>
+<branch type="IF" condition="${cover_exists}">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<var>${cover_element}</var>
+<arg>css:#tralbumArt img</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813702" elapsed="0.000033"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<var>${cover_url}</var>
+<arg>${cover_element}</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813865" elapsed="0.000037"/>
+</kw>
+<kw name="Descargar Imagen">
+<arg>${cover_url}</arg>
+<arg>${artist}</arg>
+<arg>${album_title}</arg>
+<status status="NOT RUN" start="2026-02-12T08:43:59.814105" elapsed="0.000032"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813591" elapsed="0.000588"/>
+</branch>
+<status status="NOT RUN" start="2026-02-12T08:43:59.813571" elapsed="0.000644"/>
+</if>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<var>${tracks}</var>
+<arg>css:.track_list .title a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.814286" elapsed="0.000023"/>
+</kw>
+<if>
+<branch type="IF" condition="$tracks == []">
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${MISSING_FILE}</arg>
+<arg>${url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.814452" elapsed="0.000022"/>
+</kw>
+<kw name="Continue For Loop" owner="BuiltIn">
+<doc>Skips the current FOR loop iteration and continues from the next.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.815018" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T08:43:59.814377" elapsed="0.000704"/>
+</branch>
+<status status="NOT RUN" start="2026-02-12T08:43:59.814362" elapsed="0.000754"/>
+</if>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<var>${track_url}</var>
+<arg>${track}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.815299" elapsed="0.000024"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<arg>${OUTPUT_FILE}</arg>
+<arg>${track_url}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.815411" elapsed="0.000024"/>
+</kw>
+<var name="${track}"/>
+<status status="NOT RUN" start="2026-02-12T08:43:59.815225" elapsed="0.000308"/>
+</iter>
+<var>${track}</var>
+<value>@{tracks}</value>
+<status status="NOT RUN" start="2026-02-12T08:43:59.815156" elapsed="0.000420"/>
+</for>
+<var name="${url}">https://andallicansayis.bandcamp.com/album/these-hopes-are-long-lost</var>
+<status status="FAIL" start="2026-02-12T08:43:52.259652" elapsed="7.555997">Execution terminated by signal</status>
+</iter>
+<var>${url}</var>
+<value>@{urls}</value>
+<status status="FAIL" start="2026-02-12T08:43:20.017187" elapsed="39.798525">Execution terminated by signal</status>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-02-12T08:43:59.816035" elapsed="0.000036"/>
+</kw>
+<status status="FAIL" start="2026-02-12T08:43:18.411647" elapsed="41.404739">Execution terminated by signal</status>
+</test>
+<status status="FAIL" start="2026-02-12T08:43:18.265698" elapsed="41.551727"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Bandcamp" id="s1" pass="0" fail="1" skip="0">Bandcamp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
