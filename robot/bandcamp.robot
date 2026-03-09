@@ -139,16 +139,16 @@ Aceptar Cookies Si Aparece
 Descargar Imagen
     [Arguments]    ${url}    ${artist}    ${album_title}
 
-    ${safe_artist}=    Evaluate    __import__('re').sub(r'[\\/*?:"<>|]', '-', """${artist}""")
-    ${safe_artist}=    Evaluate    "${safe_artist}".replace(" ", "_")
+    ${safe_artist}=    Evaluate    __import__('re').sub(r'[\\/*?:"<>|]', '-', artist)    artist=${artist}
+    ${safe_artist}=    Evaluate    safe_artist.replace(" ", "_")    safe_artist=${safe_artist}
 
-    ${safe_album}=    Evaluate    __import__('re').sub(r'[\\/*?:"<>|]', '-', """${album_title}""")
-    ${safe_album}=    Evaluate    "${safe_album}".replace(" ", "_")
+    ${safe_album}=    Evaluate    __import__('re').sub(r'[\\/*?:"<>|]', '-', album)    album=${album_title}
+    ${safe_album}=    Evaluate    safe_album.replace(" ", "_")    safe_album=${safe_album}
 
     ${image_file}=    Set Variable
     ...    ${IMAGE_DIR}/${safe_artist}_-_${safe_album}.jpg
 
     ${cmd}=    Set Variable
-    ...    (lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))("${url}", "${image_file}")
+    ...    (lambda u, f: __import__('urllib.request').request.urlretrieve(u, f))(url, file)
 
-    Evaluate    ${cmd}
+    Evaluate    ${cmd}    url=${url}    file=${image_file}
