@@ -139,8 +139,11 @@ Aceptar Cookies Si Aparece
 Descargar Imagen
     [Arguments]    ${url}    ${artist}    ${album_title}
 
-    ${safe_artist}=    Evaluate    "${artist}".replace(" ", "_").replace("/", "_")
-    ${safe_album}=     Evaluate    "${album_title}".replace(" ", "_").replace("/", "_")
+    ${safe_artist}=    Evaluate    __import__('re').sub(r'[\\/*?:"<>|]', '-', """${artist}""")
+    ${safe_artist}=    Evaluate    "${safe_artist}".replace(" ", "_")
+
+    ${safe_album}=    Evaluate    __import__('re').sub(r'[\\/*?:"<>|]', '-', """${album_title}""")
+    ${safe_album}=    Evaluate    "${safe_album}".replace(" ", "_")
 
     ${image_file}=    Set Variable
     ...    ${IMAGE_DIR}/${safe_artist}_-_${safe_album}.jpg
