@@ -139,10 +139,10 @@ Aceptar Cookies Si Aparece
 Descargar Imagen
     [Arguments]    ${url}    ${artist}    ${album_title}
 
-    ${safe_artist}=    Evaluate    __import__('re').sub(r'[^\w\- ]', '-', $artist)
+    ${safe_artist}=    Evaluate    __import__('re').sub(r'[^\\w\\- ]', '-', $artist)
     ${safe_artist}=    Evaluate    $safe_artist.replace(" ", "_")
 
-    ${safe_album}=     Evaluate    __import__('re').sub(r'[^\w\- ]', '-', $album_title)
+    ${safe_album}=     Evaluate    __import__('re').sub(r'[^\\w\\- ]', '-', $album_title)
     ${safe_album}=     Evaluate    $safe_album.replace(" ", "_")
 
     ${safe_album}=     Evaluate    $safe_album[:80]
