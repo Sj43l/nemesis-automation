@@ -145,7 +145,6 @@ Descargar Imagen
     ${safe_album}=     Evaluate    __import__('re').sub(r'[^\w\- ]', '-', $album_title)
     ${safe_album}=     Evaluate    $safe_album.replace(" ", "_")
 
-    # limitar longitud del nombre
     ${safe_album}=     Evaluate    $safe_album[:80]
 
     ${image_file}=    Set Variable
